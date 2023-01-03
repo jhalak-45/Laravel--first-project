@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* background-image: url('public/images/bg.png'); */
+    background-color: #fff;
+    padding: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar-collapse {
+    margin-left: 20%;
+}
+
+@media (max-width:992px) {
+    .navbar-collapse {
+        margin-left: 0%;
+    }
+
+}
+
+.navbar .navbar-brand {
+    font-size: 40px;
+    font-weight: 600;
+    color: orangered;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar {
+    background-color: #fff;
+}
+
+.navbar-collapse ul li {
+    margin-left: 20px;
+
+}
+
+.navbar-collapse ul li a {
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+.navbar-collapse ul li a:hover {
+    color: orangered;
+}
+
+.navbar-collapse ul .active {
+    margin-bottom: 1px solid orangered;
+}
+
+.container-fluid {
+    max-width: 1800px;
+}
