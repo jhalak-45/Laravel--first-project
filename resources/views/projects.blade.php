@@ -6,7 +6,7 @@
 @section('main')
     <div class="container-fluid blog-page">
         <div class="title py-2">
-            <h1 class="page-title pb-2">Blogs</h1>
+            <h1 class="page-title pb-2">Projects</h1>
         </div>
         <div class="blogs d-flex flex-wrap justify-content-around  py-4">
             <div class="card blog">

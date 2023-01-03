@@ -1,7 +1,6 @@
 <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container-fluid py-5">
-
-    <footer class="bg-light text-center">
+<div class="container-fluid footer py-5">
+    <footer class=" text-center">
         <!-- Grid container -->
         <div class="container-fluid p-4 pb-0">
             <!-- Section: Form -->
@@ -44,9 +43,9 @@
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-center p-3">
             © 2020 Copyright:
-            <a class="text-dark" href="https://mohrain.com/">Mohrain Websoft</a>
+            <a class="text-light" href="https://mohrain.com/">Mohrain Websoft</a>
         </div>
         <!-- Copyright -->
     </footer>
