@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -14,21 +19,15 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-route::get('/about', function () {
-    return view('about');
-});
-route::get('/blog', function () {
-    return view('blog');
-});
-route::get('/service', function () {
-    return view('service');
-});
-route::get('/contact', function () {
-    return view('contact');
-});
+route::get('/',[App\Http\Controllers\IndexController::class,'index'])->name('index');
+route::get('/about',[App\Http\Controllers\AboutController::class,'index'])->name('about');
+route::get('/contact',[App\Http\Controllers\ContactController::class,'index'])->name('contact');
+route::get('/services',[App\Http\Controllers\ServiceController::class,'index'])->name('services');
+route::get('/blog',[App\Http\Controllers\BlogController::class,'index'])->name('blog');
+
+
+
+
 
 Auth::routes();
 

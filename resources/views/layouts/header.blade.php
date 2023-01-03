@@ -9,8 +9,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('bootstrap/style.css') }}">
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
-    <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('bootstrap/typing.scss') }}">
 
+    <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('bootstrap/typing.js') }}"></script>
 </head>
 
 <body>
@@ -21,7 +23,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse pr-0  navbar-collapse py-1 px-auto" id="navbarNav">
+            <div class="collapse px-0  navbar-collapse py-1 px-auto" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
@@ -33,7 +35,7 @@
                         <a class="nav-link" href="{{ url('/blog') }}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('service/') }}">Services</a>
+                        <a class="nav-link" href="{{ url('/services') }}">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/contact') }}">Contact</a>

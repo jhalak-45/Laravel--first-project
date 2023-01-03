@@ -3,7 +3,7 @@
 
     <footer class="bg-light text-center">
         <!-- Grid container -->
-        <div class="container p-4 pb-0">
+        <div class="container-fluid p-4 pb-0">
             <!-- Section: Form -->
             <section class="">
                 <form action="">
@@ -52,7 +52,6 @@
     </footer>
 
 </div>
-{{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
 </body>
 
 </html>
