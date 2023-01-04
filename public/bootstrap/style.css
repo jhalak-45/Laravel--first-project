@@ -257,7 +257,9 @@ body {
 .service-page .services .card:hover {
     background-color: rgb(220, 20, 60, 0.8);
     color: #fff;
-    width: 21rem;
+    box-shadow: none;
+    /* width: 21rem; */
+    scale: 1.04;
 
 }
 
@@ -312,4 +314,15 @@ body {
     color: rgb(40, 39, 39);
     font-family: 20px;
     font-family: 'Nunito',sans-serif;
+}
+.form-label{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Nunito',sans-serif;
+}
+::-webkit-inner-spin-button{
+    display: none;
+}
+.form input:focus{
+    box-shadow: 0px;
 }

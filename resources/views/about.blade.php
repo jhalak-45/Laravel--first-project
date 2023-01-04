@@ -9,7 +9,7 @@
 
         </div>
 
-        <div class="row py-2">
+        <div class="row py-5 px-2">
             <div class="image-section col-md-5 py-3 px-2">
                 <img src="{{ asset('images/jhalak.jpg') }}" class="rounded-5 text-center" height="auto" width="100%">
             </div>

@@ -1,14 +1,14 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndexController;
-use  App\Http\Controllers\ProjectController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ProjectController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,17 +20,27 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-route::get('/',[App\Http\Controllers\IndexController::class,'index'])->name('index');
-route::get('/about',[App\Http\Controllers\AboutController::class,'index'])->name('about');
-route::get('/contact',[App\Http\Controllers\ContactController::class,'index'])->name('contact');
-route::get('/services',[App\Http\Controllers\ServiceController::class,'index'])->name('services');
-route::get('/blog',[App\Http\Controllers\BlogController::class,'index'])->name('blog');
-route::get('/projects',[App\Http\Controllers\ProjectController::class,'index'])->name('projects');
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__ . '/auth.php';
+// Route::get('/', ['IndexController@index', 'index'])->name('index');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/services', [ServiceController::class, 'index'])->name('services');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
 
 
-
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.store');
